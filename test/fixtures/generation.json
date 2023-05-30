@@ -1,0 +1,18 @@
+{
+    "id": 1,
+    "name": "generation-i",
+    "pokemon_species": [
+        {
+            "name": "bulbasaur",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/1/"
+        },
+        {
+            "name": "charmander",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/4/"
+        },
+        {
+            "name": "squirtle",
+            "url": "https://pokeapi.co/api/v2/pokemon-species/7/"
+        }
+    ]
+}

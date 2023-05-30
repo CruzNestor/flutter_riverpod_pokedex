@@ -1,0 +1,39 @@
+{
+  "@@locale": "es",
+  "appName": "Poke Generations",
+  "abilities": "Habilidades",
+  "baseStats": "Estadísticas base",
+  "baseStatsSelect": "{baseStat, select, hp{PS} attack{Ataque} defense{Defensa} specialattack{Ataque Especial} specialdefense{Defensa Especial} speed{Velocidad} other{Otro}}",
+  "@baseStatsSelect": {
+      "description": "baseStatsSelect",
+      "placeholders": {
+          "baseStat": {
+            "type":"String",
+            "example":"hp" 
+          }
+      }
+  },
+  "generations": "Generaciones",
+  "generationWithNum": "Generación {num}",
+  "@generationWithNum": {
+    "description": "Este es el título por generaciones",
+    "placeholders": {
+      "num": {
+        "type": "String"
+      }
+    }
+  },
+  "height": "Altura",
+  "pokemonTypeSelect": "{pokemonType, select, bug{Bicho} dark{Siniestro} dragon{Dragon} electric{Eléctrico} fairy{Hada} fighting{Lucha} fire{Fuego} flying{Volador} ghost{Fantasma} grass{Planta} ground{Tierra} ice{Hielo} normal{Normal} poison{Veneno} psychic{Psíquico} rock{Roca} steel{Acero} water{Agua} other{???}}",
+  "@pokemonTypeSelect": {
+    "description": "pokemonTypeSelect",
+    "placeholders": {
+      "pokemonType": {
+        "type":"String",
+        "example":"bug" 
+      }
+    }
+  },
+  "searchPokemonPlaceholder": "Buscar por nombre o ID",
+  "weight": "Peso"
+}
