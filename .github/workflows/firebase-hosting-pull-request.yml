@@ -17,6 +17,11 @@ jobs:
           version: 3.7.1
       - name: Build web project
         run: flutter build web -t lib/main.dart
+      - name: ⬇️ Archive Production Artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: build
+          path: build/web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
