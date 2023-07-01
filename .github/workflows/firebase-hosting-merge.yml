@@ -16,12 +16,13 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
-          version: 3.7.1
       - name: Build web project
-        run: flutter build web -t lib/main.dart --release
+        run: | 
+          flutter pub get
+          flutter build web -t lib/main.dart --release
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HOSTINGTEST_616A0 }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_HOSTINGFLUTTER }}'
           channelId: live
-          projectId: hostingtest-616a0
+          projectId: hostingflutter
