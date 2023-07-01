@@ -68,7 +68,13 @@ class GenerationPage extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Image.asset(
-                          '${UIConstants.POKEMON_GENERATION}/${generations[index]['id']}.png'
+                          '${UIConstants.POKEMON_GENERATION}/${generations[index]['id']}.png',
+                          errorBuilder: (context, error, stackTrace) {
+                            return Container(
+                              alignment: Alignment.center,
+                              child: const Text('Image Not Found', style: TextStyle(fontSize: 10))
+                            );
+                          },
                         )
                       )
                     )
