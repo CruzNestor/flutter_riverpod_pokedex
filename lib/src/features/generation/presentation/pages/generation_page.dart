@@ -67,7 +67,7 @@ class GenerationPage extends StatelessWidget {
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.all(10.0),
-                        child: Image.network(
+                        child: Image.asset(
                           '${UIConstants.POKEMON_GENERATION}/${generations[index]['id']}.png'
                         )
                       )
