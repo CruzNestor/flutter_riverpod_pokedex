@@ -28,8 +28,7 @@ class GenerationPage extends StatelessWidget {
     final double itemWidth = size.width;
     return Scaffold(
       appBar: AppBar(
-        //title: Text(S.of(context).generations),
-        title: const Text('Este es un test'),
+        title: Text(S.of(context).generations),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10.0),
