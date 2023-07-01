@@ -17,7 +17,7 @@ jobs:
       - name: Build web project
         run: | 
           flutter pub get
-          flutter build web -t lib/main.dart --web-renderer html --release
+          flutter build web -t lib/main.dart --release --web-renderer canvaskit
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
