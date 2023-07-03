@@ -48,12 +48,16 @@ class GenerationPage extends StatelessWidget {
         mainAxisSpacing: 10,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 15),
         children: List.generate(generations.length, (index) {
-          return GestureDetector(
+          return Card(
             key: Key("gen${generations[index]['id']}"),
-            onTap: () {
-              context.push('/generation/${generations[index]['id']}');
-            },
-            child: Card(
+            child: InkWell(
+              onTap: () async {
+                await Future.delayed(const Duration(milliseconds: 200));
+                if(context.mounted) context.push('/generation/${generations[index]['id']}');
+              },
+              customBorder: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+              ),
               child: AspectRatio(
                 aspectRatio: itemWidth / itemHeight,
                 child: Column(
@@ -74,7 +78,7 @@ class GenerationPage extends StatelessWidget {
                               alignment: Alignment.center,
                               child: const Text('Image Not Found', style: TextStyle(fontSize: 10))
                             );
-                          },
+                          }
                         )
                       )
                     )

@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 import 'package:dio/dio.dart';
 
@@ -47,7 +47,7 @@ class PokemonDetailRemoteDataSourceImpl implements PokemonDetailRemoteDataSource
 
   Future<Map<String, dynamic>> getSpecie(int id) async {
     try {
-      final locale = window.locale;
+      final locale = WidgetsBinding.instance.platformDispatcher.locale;
       const locales = S.supportedLocales;
       String flavorText = '';
       String genus = '';
@@ -80,7 +80,7 @@ class PokemonDetailRemoteDataSourceImpl implements PokemonDetailRemoteDataSource
       } else {
         throw const ServerException(message: SERVER_FAILURE_MESSAGE);
       }
-    } on DioError catch(e) {
+    } on DioException catch(e) {
       if(e.response?.statusCode == 404){
         return {'flavor_text' : '', 'genus': ''};
       }

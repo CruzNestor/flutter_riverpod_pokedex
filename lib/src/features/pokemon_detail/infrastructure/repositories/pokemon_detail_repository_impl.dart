@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-
 import '../../../../configs/errors/exceptions.dart';
 import '../../../../configs/platform/network_info.dart';
 import '../../domain/entities/pokemon_detail.dart';
@@ -20,8 +19,8 @@ class PokemonDetailRepositoryImpl implements PokemonDetailRepository {
     if(await networkInfo.isConnected){
       try {
         return await remote.getPokemonDetail(id);
-      } on DioError catch(e) {
-        Error.throwWithStackTrace(DioException.fromDioError(e).toString(), StackTrace.current);
+      } on DioException catch(e) {
+        Error.throwWithStackTrace(getMessageDioException(e), StackTrace.current);
       } on ServerException catch(e) {
         Error.throwWithStackTrace(e, StackTrace.current);
       }

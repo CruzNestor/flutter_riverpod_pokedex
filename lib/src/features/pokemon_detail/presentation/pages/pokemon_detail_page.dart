@@ -162,7 +162,7 @@ class PokemonDetailPage extends ConsumerWidget {
   }
 
   Widget buildLoading() {
-    return Column(children: const [
+    return const Column(children: [
       Expanded(
         child: Center(child: CircularProgressIndicator())
       )

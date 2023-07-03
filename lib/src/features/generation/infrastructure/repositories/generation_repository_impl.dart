@@ -22,8 +22,8 @@ class GenerationRepositoryImpl implements GenerationRepository {
     if(await networkInfo.isConnected){
       try {
         return await remote.getGeneration(id);
-      } on DioError catch(e) {
-        Error.throwWithStackTrace(DioException.fromDioError(e).toString(), StackTrace.current);
+      } on DioException catch(e) {
+        Error.throwWithStackTrace(getMessageDioException(e), StackTrace.current);
       } on ServerException catch(e) {
         Error.throwWithStackTrace(e, StackTrace.current);
       }

@@ -21,9 +21,9 @@ class SearchPokemonRepositoryImpl implements SearchPokemonRepository {
     if(await networkInfo.isConnected){
       try {
         return await remote.searchPokemon(text);
-      } on DioError catch(e) {
+      } on DioException catch(e) {
         Error.throwWithStackTrace(
-          DioException.fromDioError(e).toString(), StackTrace.current
+          getMessageDioException(e).toString(), StackTrace.current
         );
       }
     }
