@@ -1,6 +1,6 @@
 # Flutter Riverpod Pokedex
 
-This application is developed with Flutter, it consumed the API RESTful [PokeApi](https://pokeapi.co/). This application is intended to be an example of Clean Architecture, Unit Test, Widget Test and Integration test. Watch a demo [here](https://cruznestor.github.io/flutter_riverpod_pokedex_page/).
+This application is developed with Flutter, it consumed the API RESTful [PokeApi](https://pokeapi.co/). This application is intended to be an example of Clean Architecture, Unit Test, Widget Test and Integration test. Watch a [demo](https://cruznestor.github.io/flutter_riverpod_pokedex_page/).
 
 ## Dependencies
 
